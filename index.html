@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Developer Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-blue: #2858ff;
+      --accent: #3fc1c9;
+      --light-bg: #f5f7fa;
+      --profile-img: url('https://avatars.githubusercontent.com/u/583231?v=4');
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--light-bg);
+      color: #1a1a1a;
+    }
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 32px 16px 60px 16px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      background: var(--main-blue);
+      color: #fff;
+      border-radius: 28px;
+      padding: 44px 38px 38px 38px;
+      margin-top: 40px;
+      box-shadow: 0 8px 32px 0 rgba(40,88,255,0.07);
+    }
+    .profile-pic {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      background: #fff;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 12px 0 rgba(0,0,0,0.07);
+    }
+    .profile-info {
+      flex: 1;
+    }
+    .profile-info h1 {
+      font-size: 2.6rem; margin: 0 0 5px 0;
+      letter-spacing: 1.5px;
+    }
+    .profile-info p {
+      margin: 0 0 10px 0; font-size: 1.13rem;
+      color: #bcd3fc;
+      font-weight: 500;
+    }
+    .profile-info .socials a {
+      margin-right: 12px; color: #fff; text-decoration: none; font-size: 1.2rem;
+      opacity: .88;
+    }
+    .main-sections { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 36px;}
+    @media (max-width: 900px) { .main-sections { grid-template-columns: 1fr; } }
+    section {
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 3px 10px 0 rgba(40,88,255,0.03);
+      padding: 34px 28px 26px 28px;
+      margin-bottom: 20px;
+    }
+    section h2 {
+      font-size: 1.38rem; color: var(--main-blue);
+      margin: 0 0 18px 0; font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .skills-list, .project-list { padding: 0; margin: 0; list-style: none; }
+    .skills-list li {
+      display: inline-block;
+      margin: 0 14px 14px 0;
+      background: #ecf0fc;
+      color: #2858ff;
+      border-radius: 11px;
+      padding: 8px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+    }
+    .project-list li {
+      margin-bottom: 21px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e6e8f1;
+    }
+    .project-list strong {
+      display: block; font-size: 1.1rem;
+      color: #2858ff; margin-bottom: 5px;
+    }
+    .contact-info p {
+      margin: 10px 0 0 0; font-size: 1.07rem;
+    }
+    .contact-info a {
+      color: #2858ff; text-decoration: none;
+    }
+    @media (max-width:600px) {
+      .container { padding: 10px; }
+      header { flex-direction: column; align-items: flex-start; padding: 24px 16px 18px 16px; }
+      .main-sections { gap: 16px; }
+      section { padding: 18px 10px 14px 10px; }
+      .profile-pic { width: 80px; height: 80px; }
+      .profile-info h1 { font-size: 2rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER / PROFILE -->
+    <header>
+      <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="profile" class="profile-pic">
+      <div class="profile-info">
+        <h1>홍길동</h1>
+        <p>Frontend Developer | React, Vue, JavaScript</p>
+        <div class="socials">
+          <a href="https://github.com/your-github" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+          <a href="mailto:your@email.com">Email</a>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN CONTENT SECTIONS -->
+    <div class="main-sections">
+      <!-- Left Column -->
+      <section>
+        <h2>About Me</h2>
+        <p>사용자 경험과 인터페이스에 집중하는 프론트엔드 개발자입니다.<br>
+        React, Vue, JavaScript 등 최신 프레임워크와 웹 표준에 익숙하며,<br>
+        문제 해결과 팀 협업을 즐깁니다.<br>
+        </p>
+      </section>
+      <section>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>React</li>
+          <li>Vue.js</li>
+          <li>JavaScript (ES6+)</li>
+          <li>HTML5</li>
+          <li>CSS3 / SCSS</li>
+          <li>Git &amp; Github</li>
+          <li>Figma</li>
+          <li>TypeScript</li>
+        </ul>
+      </section>
+      <!-- Right Column -->
+      <section>
+        <h2>Projects</h2>
+        <ul class="project-list">
+          <li>
+            <strong>포트폴리오 웹사이트</strong>
+            <div>React 기반 개인 포트폴리오 사이트 (반응형, 다크모드 지원)</div>
+            <a href="https://github.com/your-github/portfolio" target="_blank">소스보기</a>
+          </li>
+          <li>
+            <strong>할 일 관리 앱</strong>
+            <div>Vue + Firebase로 개발한 실시간 Todo List, 회원 인증, 데이터 동기화</div>
+            <a href="https://your-todo-demo.netlify.app" target="_blank">데모보기</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Contact</h2>
+        <div class="contact-info">
+          <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+          <p>GitHub: <a href="https://github.com/your-github" target="_blank">github.com/your-github</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/your-linkedin" target="_blank">linkedin.com/in/your-linkedin</a></p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
